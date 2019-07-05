@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package simple;
+
+// 请求
+message SimpleRequest {
+    string data = 1;
+}
+
+// 响应
+message SimpleResponse {
+    string data = 1;
+}
+
+// rpc方法
+service Simple {
+    rpc  GetLine (SimpleRequest) returns (SimpleResponse);
+}
